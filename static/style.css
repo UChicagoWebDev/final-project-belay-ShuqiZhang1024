@@ -1,0 +1,347 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* --------------- Index CSS --------------- */
+body {
+    margin: 0;
+    padding: 0;
+    animation: fadein 1s;
+}
+
+img {
+    padding: 8px;
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+input {
+    padding: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #845ec2; /* Changed to a different shade for freshness */
+    color: #ffffff;
+    text-align: center;
+}
+
+.content {
+    margin-bottom: auto;
+    background-color: #fbeaff;
+}
+
+.footer {
+    padding: 20px 0;
+    background-color: #fbeaff;
+    text-align: center;
+}
+
+/* --------------- Form / Button CSS --------------- */
+.form-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-auto-rows: minmax(min-content, max-content);
+    justify-items: center;
+    gap: 15px;
+    height: auto;
+    color: #000000;
+}
+
+.form-page h3 .form-page .username, .form-page .password, .form-page .newchannel {
+    grid-column: 1 / -1;
+}
+
+.profile-form {
+    padding: 16px;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.login-page-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page-buttons button {
+    padding: 10px 15px;
+    background-color: #845ec2;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-page-buttons button:hover {
+    background-color: #00c9a7;
+}
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: start;
+}
+
+.action-button {
+    margin: 10px auto;
+    padding: 5px 10px;
+    background-color: #845ec2;
+    color: #ffffff;
+    display: block;
+    width: auto;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #00c9a7;
+}
+
+/* --------------- Channel View CSS --------------- */
+.channel-view {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.channel-block {
+    background-color: #b39cd0;
+}
+
+.channel-list {
+    color: #ffffff;
+    width: auto;
+}
+
+.channel-list h2 {
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.channel-list a, .channel-list .channel-buttons {
+    padding: 0 16px;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.channel-list .channel-buttons #selected {
+    color: #ffc75f;
+    font-weight: bold;
+}
+
+.channel-buttons a:hover {
+    color: #00c9a7;
+    font-weight: bold;
+}
+
+/* --------------- Message View CSS --------------- */
+.message-view {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.message-block {
+    padding: 8px;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.message-list {
+    padding: 8px;
+}
+
+.message-list div {
+    padding: 8px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 5px;
+}
+
+.message-list p {
+    margin: 0;
+    padding: 8px;
+    background-color: #ffffff;
+    color: #845ec2;
+}
+
+.message-list #author {
+    padding-left: 8px;
+    color: #ffc75f;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.message-list #body {
+    padding-left: 8px;
+    color: #845ec2;
+    font-size: 20px;
+}
+
+.message-list #reply_count {
+    padding-left: 8px;
+    color: #845ec2;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.message-list #reply_count:hover {
+    text-decoration: underline;
+}
+
+/* --------------- Reply View CSS --------------- */
+.reply-view {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+}
+
+.reply-block {
+    padding: 8px;
+    background-color: #f4f4f4;
+}
+
+.message-list #replied-message {
+    background-color: #ffffff;
+    color: #845ec2;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 24px;
+}
+
+.message-list span {
+    cursor: pointer;
+}
+
+.message-list #replied-message #author {
+    padding-left: 8px;
+    color: #ffc75f;
+    font-size: 30px;
+}
+
+.message-list #replied-message #body {
+    padding-left: 8px;
+    color: #845ec2;
+    font-size: 24px;
+}
+
+/* --------------- Post Form CSS --------------- */
+.post-message {
+    display: grid;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.post-message form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.post-message form textarea {
+    padding: 8px;
+    grid-area: 1 / 1 / 2 / 2;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+}
+
+.post-message form button {
+    padding: 16px;
+    background-color: #845ec2;
+    color:  #ffffff;
+    grid-area: 1 / 2 / 2 / 3;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.post-message form button:hover {
+    background-color: #00c9a7;
+}
+
+.narrow {
+    display: none;
+}
+
+.wide {
+    display: grid;
+}
+
+/* --------------- Responsive Layout CSS --------------- */
+@media (max-width: 768px) {
+  /* Set all views to a single column layout */
+  .channel-view, .message-view, .reply-view {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* In .channel-view, show .channel-block and hide .message-block */
+  .channel-view .channel-block {
+    display: block; /* or 'grid' or 'flex' depending on your needs */
+  }
+  .channel-view .message-block {
+    display: none;
+  }
+
+  /* In .message-view, show .message-block and hide .channel-block */
+  .message-view .message-block {
+    display: block; /* or 'grid' or 'flex' */
+  }
+  .message-view .channel-block {
+    display: none;
+  }
+
+  .narrow {
+      display: grid;
+  }
+
+  .wide {
+      display: none;
+  }
+
+
+  /* In .reply-view, show .reply-block and hide the others */
+  .reply-view .reply-block {
+    display: block; /* or 'grid' or 'flex' */
+  }
+  .reply-view .channel-block, .reply-view .message-block {
+    display: none;
+  }
+}
